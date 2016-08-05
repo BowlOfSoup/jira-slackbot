@@ -1,0 +1,41 @@
+{
+  "name": "jira-slack-bot",
+  "description": "Get information from Jira in Slack",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": {
+    "name": "Bowl Of Soup",
+    "url": "https://github.com/BowlOfSoup"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "ASL",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "request": "~2.60.0",
+    "underscore": "^1.7.0",
+    "node-slackbot": "0.0.6",
+    "jira": "0.9.2",
+    "promise": "^7.0.0"
+  },
+  "devDependencies": {},
+  "bin": {
+    "bot": "bin/jiraSlackBot.js"
+  },
+  "keywords": [
+    "slack",
+    "jira"
+  ]
+}

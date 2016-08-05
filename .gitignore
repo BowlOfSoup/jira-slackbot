@@ -1,0 +1,7 @@
+.idea
+jira.js
+logs
+build
+.grunt
+node_modules
+tmp
