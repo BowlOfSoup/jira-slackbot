@@ -1,4 +1,4 @@
-# Jira Slackbot
+# JIRA Slackbot
 
 Get information about a [JIRA](https://www.atlassian.com/software/jira) issue directly in you [Slack](http://slack.com) channel.
 
