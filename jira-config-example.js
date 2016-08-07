@@ -5,6 +5,7 @@ var config = {
      Script settings
      */
     verbose: true,
+    verboseApi: true,
 
     /*
      Slack and Slack Bot settings
@@ -32,7 +33,8 @@ var config = {
             }
         }
     },
-    projects: ["REL", "HOT", "GUI", "CA", "ZA", "EMR", "MHCLC", "MPPS"],
+    projects: ["REL", "HOT", "GUI", "CA", "ZA", "EMR", "MHCLC", "MPPS"], // Project keys in JIRA.
+    jira_issue_links_scrape_confluence: true, // When an issue link (or mention) is found referring to Confluence, scrape the confluence page.
     confluence_details: {
         user: '',
         password: ''
@@ -41,6 +43,9 @@ var config = {
     /*
      Message settings
      */
+    showIssueStatus: true,
+    showIssueLinks: true,
+    showIssueDevelopmentInformation: true,
     custom_texts: {
         issuePrefix: "",
         issueLinksText: "ISSUE LINKS",
@@ -76,7 +81,7 @@ var config = {
     },
     statusSubtaskConversions: [
         // When a subtask is in a certain lane, and contains a certain substring.
-        // Empty when not using sprint board.
+        // Make empty (statusSubtaskConversions: []) when not using sprint board.
         {
             statusText: 'Bugfixing',
             contains: {

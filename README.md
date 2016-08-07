@@ -45,13 +45,8 @@ Also, the newly created bot has nothing to do with the bot who does the **post**
 
 ## Todo
 
-- Fix jiraApiCustomUri, to use config
-- Fix Confluence lookup, handle possible errors (combine with jiraApiCustomUri?)
 - Implement reaction to bot (jira slack intergration) messages
-- Implement more verbose messages
 - Implement error channel
-- Make sure system works when config parameters are empty
-- Implement reject + handling of errors when APIs not available
 - Implement configuration on what to output
 - Implement creation of subtasks trough bot.
 - Add description for config file to README.md
