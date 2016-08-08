@@ -5,7 +5,7 @@ var config = {
      Script settings
      */
     verbose: true,
-    verboseApi: true,
+    verboseApi: false,
 
     /*
      Slack and Slack Bot settings

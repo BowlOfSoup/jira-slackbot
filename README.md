@@ -45,9 +45,9 @@ Also, the newly created bot has nothing to do with the bot who does the **post**
 
 ## Todo
 
-- Implement reaction to bot (jira slack intergration) messages
-- Implement error channel
 - Implement configuration on what to output
+- Implement reaction to bot (jira slack integration) messages
+- Implement error channel
 - Implement creation of subtasks trough bot.
 - Add description for config file to README.md
 
