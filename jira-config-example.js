@@ -11,6 +11,7 @@ var config = {
      Slack and Slack Bot settings
      */
     token: '',
+    tokenForAdminUserToInterceptJiraPushMessages: '',
 
     /*
      API and connection settings

@@ -6,8 +6,9 @@ It does the following:
 
 - Appends a link to the mentioned JIRA issues, including the summary of the issue.
 - Calculates the status of the JIRA issue from it's subtasks. This is customizable.
-- Can resolve the issue links (or mentions), so references made from e.g. [Confluence](https://www.atlassian.com/software/confluence) to the issue will also be displayed as links. 
+- Can resolve the issue links (or mentions), so references made from [Confluence](https://www.atlassian.com/software/confluence) to the issue will also be displayed as links. 
 - Can resolve pull requests in [Bitbucket](https://www.atlassian.com/software/bitbucket) (or Stash) and displays their status and reviewers.
+- Intercepts the JIRA app (webhook from JIRA itself) and improves the messages (adds parent issue if available).
 
 Other features:
 
@@ -33,20 +34,23 @@ If the verbose option is set in the config, output information will be given.
 
 ## Configuration in Slack
 
-For this plugin to work you can either get a test API token from Slack [here](https://api.slack.com/docs/oauth-test-tokens),
+1. For this plugin to work you can either get a test API token from Slack [here](https://api.slack.com/docs/oauth-test-tokens),
 but this will only make it work for your user, and only for channels you are part of.
 
-The best way is to create a bot [here](https://medicoredevelopment.slack.com/apps/A0F7YS25R-bots) and configure it to your liking.
-You actually need to **invite the created bot to a channel** where you want the bot to listen to posts.
-
+2. The best way is to create a bot [here](https://medicoredevelopment.slack.com/apps/A0F7YS25R-bots) and configure it to your liking.
+You actually need to **invite the created bot to a channel** where you want the bot to listen to posts. 
 Downside of a bot, that it does not have access to private channels but the 'test token' does. Guess that is a Slack thingy.
 
-Also, the newly created bot has nothing to do with the bot who does the **post** in a channel, which you can configure in the config file.
+3. **But**, if you want support for the JIRA app integration, that is, replacing the default JIRA app (webhook from JIRA) messages with a better message, 
+you will need to create a seperate user (log in with it) and generate a test API token from Slack [here](https://api.slack.com/docs/oauth-test-tokens). Place the token in the config file, grant the user admin rights in Slack and invite it to the channel in which you want to use the functionality.
+If you use this method (and thus use the JIRA Slack app integration) you don't need step 2 (a seperate bot).
+
+The newly created bot or user has nothing to do with the bot who does the **post** in a channel, which you can configure in the config file.
 
 ## Todo
 
-- Implement configuration on what to output
-- Implement reaction to bot (jira slack integration) messages
+- Implement configuration on what to output for an issue (details)
+- Add support for bamboo (EMR-4610) / or support only Confluence?
 - Implement error channel
 - Implement creation of subtasks trough bot.
 - Add description for config file to README.md
