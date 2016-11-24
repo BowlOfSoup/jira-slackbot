@@ -20,7 +20,7 @@ Other features:
 This *bot* can run on any environment with [NodeJS](https://nodejs.org) installed. 
 If you want to run it in the background see paragraph _Run in background_ below.
 
-```javascript
+```
 git clone https://github.com/BowlOfSoup/jira-slackbot.git
 cd jira-slackbot
 npm install
