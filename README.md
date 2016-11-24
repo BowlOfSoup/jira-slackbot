@@ -56,8 +56,8 @@ Install _forever_.
 
 You can watch the scripts verbose output in a logfile by running:
 
-    forever start -l \path\to\logfile -a -w -c node your-config-file.js
-    tail -f \path\to\logfile
+    forever start -l /path/to/logfile -a -w -c node your-config-file.js
+    tail -f /path/to/logfile
 
 Stop the script by running:
 
