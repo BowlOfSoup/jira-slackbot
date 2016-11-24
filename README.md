@@ -17,8 +17,8 @@ Other features:
 
 ## Installation
 
-This *bot* can run on any environment with [NodeJS](https://nodejs.org) installed.
-Development tip: If you want to run it in the background you can use e.g. [tmux](https://tmux.github.io/).
+This *bot* can run on any environment with [NodeJS](https://nodejs.org) installed. 
+If you want to run it in the background see paragraph _Run in background_ below.
 
 ```javascript
 git clone https://github.com/BowlOfSoup/jira-slackbot.git
@@ -33,6 +33,7 @@ You should copy the jira-config-example.js to e.g. your-config-file.js and run:
 If the verbose option is set in the config, output information will be given.
 
 ## Configuration in Slack
+TL;DR If you have JIRA webhook integration with Slack choose option **3**, else option **2**.
 
 1. For this plugin to work you can either get a test API token from Slack [here](https://api.slack.com/docs/oauth-test-tokens),
 but this will only make it work for your user, and only for channels you are part of.
@@ -47,13 +48,27 @@ If you use this method (and thus use the JIRA Slack app integration) you don't n
 
 The newly created bot or user has nothing to do with the bot who does the **post** in a channel, which you can configure in the config file.
 
+## Run in background
+Install _forever_.
+
+    npm install forever -g
+    forever start -w -c node your-config-file.js
+
+You can watch the scripts verbose output in a logfile by running:
+
+    forever start -l \path\to\logfile -a -w -c node your-config-file.js
+    tail -f \path\to\logfile
+
+Stop the script by running:
+
+    forever stopall
+
 ## Todo
 
-- Implement configuration on what to output for an issue (details)
-- Add support for bamboo (EMR-4610) / or support only Confluence?
+- Implement configuration on what to output for an issue (actual API fields)
+- Add support for bamboo _(EMR-4610)_
 - Implement error channel
 - Implement creation of subtasks trough bot.
-- Add description for config file to README.md
 
 ## Special thanks
 
