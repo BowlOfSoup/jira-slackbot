@@ -63,6 +63,10 @@ Stop the script by running:
 
     forever stopall
 
+**To be even more safe, run with nodemon**:
+
+    forever start -l /path/to/logfile -a -c node_modules/nodemon/bin/nodemon.js  jira.js --exitcrash
+
 ## Todo
 
 - Implement configuration on what to output for an issue (actual API fields)
