@@ -1,6 +1,6 @@
 # JIRA Slackbot
 
-Get information about a [JIRA](https://www.atlassian.com/software/jira) issue directly in you [Slack](http://slack.com) channel.
+Get information about a [JIRA](https://www.atlassian.com/software/jira) issue directly in your [Slack](http://slack.com) channel.
 
 It does the following:
 
